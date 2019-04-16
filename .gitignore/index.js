@@ -92,11 +92,11 @@ var member = msg.guild.member(user);
   .addBlankField()
   .setFooter('Krypto\'Bot by Adam7680 • Illimity#3386', 'https://i.imgur.com/xrgsfzJ.png');
 
-
+  var saytext = msg.content.split(' ').slice(1).join(' ')
   const sayEmbed = new Discord.RichEmbed()
   .setColor('0x585858')
   .setTitle('Say:')
-  .setDescription(text)
+  .setDescription(saytext)
   .setTimestamp()
   .setFooter(useruser)
 
@@ -135,7 +135,7 @@ var member = msg.guild.member(user);
     }
   }
 
-  if(msg.content.startsWith(prefix + 'mpall')) {
+  if(msg.content.startsWith(prefix + 'mp')) {
     msg.delete()
   msg.guild.members.forEach(member => {
     var mptext = msg.content.split(' ').slice(1).join(' ')
