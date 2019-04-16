@@ -34,8 +34,8 @@ var member = msg.guild.member(user);
   }
 
   if (msg.content.startsWith(prefix + 'kick')) {
-    if (msg.member.hasPermission("KICK_MEMBERS")) return msg.reply("Vous n'avez pas la permission de __Kick des membres__ !")
-    if (user) {
+var permkick = msg.member.hasPermission("KICK_MEMBERS")
+    if(!permkick) return;
       if (member) {
         member.kick('Optional reason that will display in the audit logs').then(() => {
           msg.reply(`Vous avez kick **${user.tag}** avec succès :white_check_mark: !`);
@@ -116,7 +116,8 @@ var member = msg.guild.member(user);
   }
   if (msg.content.startsWith(prefix + 'ban')) {
     const user = msg.mentions.users.first();
-    if (msg.member.hasPermission("BAN_MEMBERS")) return msg.reply("Vous n'avez pas la permission de __Bannir des membres__ !")
+    var permban = msg.member.hasPermission("BAN_MEMBERS")
+    if(!permban) return;
     if (user) {
       const member = msg.guild.member(user);
       if (member) {
@@ -139,14 +140,13 @@ var member = msg.guild.member(user);
   if(msg.content.startsWith(prefix + 'mp')) {
   msg.guild.members.forEach(member => {
     var mptext = msg.content.split(' ').slice(1).join(' ')
-    if(!mptext) return msg.channel.send('Veuillez spécifié votre message !');
+    if(!mptext) return;
     var perm = msg.member.hasPermission("ADMINISTRATOR")
-    if(!perm) return msg.channel.send('Vous devez être au moins Administrateur pour effectuez cette commande !');
+    if(!perm) return;
   member.send(mptext)
   msg.channel.send("**:white_check_mark: Message** __" + mptext + "__ **envoyé à tout le serveur.**");
-  msg.delete()
-  })
-  msg.delete()
+})
+
   }
 });
 
