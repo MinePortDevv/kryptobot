@@ -93,6 +93,7 @@ var member = msg.guild.member(user);
   .setFooter('Krypto\'Bot by Adam7680 • Illimity#3386', 'https://i.imgur.com/xrgsfzJ.png');
 
   var saytext = msg.content.split(' ').slice(1).join(' ')
+  var useruser = `${msg.author.username}`
   const sayEmbed = new Discord.RichEmbed()
   .setColor('0x585858')
   .setTitle('Say:')
