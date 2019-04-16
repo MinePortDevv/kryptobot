@@ -144,7 +144,7 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
     var perm = msg.member.hasPermission("ADMINISTRATOR")
     if(!perm) return;
   member.send(mptext)
-  msg.channel.send("**:white_check_mark: Message** __" + mptext + "__ **envoyé à tout le serveur.**");
+
 })
 
   }
