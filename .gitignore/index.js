@@ -144,7 +144,7 @@ var member = msg.guild.member(user);
     if(!perm) return msg.channel.send('Vous devez être au moins Administrateur pour effectuez cette commande !');
   member.send(mptext)
   msg.delete()
-  msg.channel.send("**:white_check_mark: Message** __" + mptext + "__ **envoyé à tout le serveur.**")
+  msg.channel.send("**:white_check_mark: Message** __" + mptext + "__ **envoyé à tout le serveur.**");
   }) 
   }
 });
