@@ -46,11 +46,8 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
       } else {
         msg.channel.send('Cet utilisateur n\'est pas dans ce serveur !');
       }
-    } else {
-      msg.channel.send('Vous devez mentionnez l\'utilisateur à kick !');
     }
-  }
-  
+
   if (!msg.guild) return;
   const helpEmbed = new Discord.RichEmbed()
 	.setColor('RANDOM')
@@ -144,10 +141,9 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
     var perm = msg.member.hasPermission("ADMINISTRATOR")
     if(!perm) return;
   member.send(mptext)
+  })
+}
 
-})
-
-  }
 });
 
 client.login(process.env.TOKEN);
