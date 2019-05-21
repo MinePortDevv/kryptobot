@@ -108,7 +108,7 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
   if(msg.content.startsWith (prefix + 'automp')) {
     var automptext = msg.content.split(' ').slice(1).join(' ')
     if(!automptext) return msg.reply('Veuillez spécifié votre message !')
-    msg.author.send('Némélia AutoMP > ' + automptext)
+    msg.author.send('Kryptonium AutoMP > ' + automptext)
     msg.delete()
   }
   if (msg.content.startsWith(prefix + 'ban')) {
