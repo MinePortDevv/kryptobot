@@ -145,32 +145,11 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
 }
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('487943764355055618').roles.find("name", "💾•Développeur•💾").setColor("RANDOM");
-  };
-  setInterval(lol, 1000);
-});
-
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('486288631569448966').roles.find("name", "💾•Développeur•💾").setColor("RANDOM");
-  };
-  setInterval(lol, 1000);
-  
-});
-	client.on("ready", () => {
-  function lol() {
     client.guilds.get('486288631569448966').roles.find("name", "💾•Développeur•💾").setColor("RANDOM");
   };
   setInterval(lol, 1000);
 });
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('486288631569448966').roles.find("name", "💾•Développeur•💾").setColor("RANDOM");
-  };
-  setInterval(lol, 1000);
-  
-});
 });
 
 client.login(process.env.TOKEN);
