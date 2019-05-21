@@ -143,6 +143,9 @@ var permkick = msg.member.hasPermission("KICK_MEMBERS")
   member.send(mptext)
   })
 }
+	if(msg.content === (prefix + "test")){
+		msg.channel.send("Test");
+	}
 
 });
 
